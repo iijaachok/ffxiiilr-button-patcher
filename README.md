@@ -1,8 +1,10 @@
 # lr13-btn-mod
 
-Installs the Console Button Prompts mod for *Lightning Returns: Final Fantasy XIII*,
+Installs the Console Button Prompts mod for _Lightning Returns: Final Fantasy XIII_,
 replacing the mod's Windows batch installer. Filelist encryption and decryption are
 ported from [WhiteCryptTool](https://github.com/Surihix/WhiteCryptTool).
+
+Based on mod that can be discovered by searching for `FFXIII-LR - Console Button Prompts (v1.0).7z`. This is a Rust cross-platform CLI binary for other platforms other than Windows.
 
 ## Build
 
@@ -13,7 +15,7 @@ cargo build --release
 ## Setup
 
 Copy the binary and the `mod/` folder from the original patch into the game's
-`weiss_data` folder (the one containing `sys/`):
+`weiss_data` folder (containing `sys/`):
 
 ```text
 weiss_data/
