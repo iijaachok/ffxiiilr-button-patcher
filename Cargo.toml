@@ -1,0 +1,24 @@
+[package]
+name = "lr13-btn-mod"
+version = "0.1.0"
+edition = "2024"
+description = "Cross-platform patcher for Krisan Thyme's Console Button Prompts mod (Lightning Returns: FFXIII)"
+license = "GPL-3.0-or-later"
+
+[[bin]]
+name = "lr13-btn-mod"
+path = "src/main.rs"
+
+[dependencies]
+anyhow = "1"
+clap = { version = "4", features = ["derive"] }
+miniz_oxide = { version = "0.9", default-features = false, features = ["with-alloc"] }
+
+# Size-optimized release profile.
+[profile.release]
+opt-level = "s"
+lto = "fat"
+codegen-units = 1
+panic = "abort"
+strip = true
+incremental = false
